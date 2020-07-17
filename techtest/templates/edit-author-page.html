@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+    <!--EDIT AUTHOR FORM-->
+    <h1>EDIT AUTHOR</h1>
+    <div class="card card-body">
+        <form action='/update_author/{{ author.id }}' method="POST">
+            <div class="form-group">
+                <input type="text" class="form-control" name="firstname" placeholder="First Name"
+                       value="{{ author.first_name }}" required>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+                       value="{{ author.last_name }}" required>
+            </div>
+            <button class="btn btn-primary btn-block">
+                Save
+            </button>
+        </form>
+    </div>
+    <!--END EDIT AUTHOR FORM-->
+{% endblock %}
